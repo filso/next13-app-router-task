@@ -1,10 +1,14 @@
 import BigNumber from "bignumber.js";
 
-import { Balance, Currency, User } from '@/types';
+import { Balance, Currency, User } from "@/types";
 
-export type BalanceTableRow = Balance & { currency: Currency; user: User };
+export type BalanceTableRow = Balance & { currency: Currency; user: User } & {
+  formattedFunds: string;
+};
 
-export function getRoundedFunds(row: BalanceTableRow): string {
-  const { fundsAvailable, currency } = row;
-  return new BigNumber(fundsAvailable).precision(currency.precision).toString();
+export function getRoundedFunds(
+  fundsAvailable: string,
+  currency: Currency
+): string {
+  return new BigNumber(fundsAvailable).toPrecision(currency.precision);
 }

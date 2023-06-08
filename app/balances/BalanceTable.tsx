@@ -22,7 +22,7 @@ export default function BalanceTable({ data }: BalanceTableProps) {
       <td>{row.user.userName}</td>
       <td>
         <Tooltip label={row.fundsAvailable}>
-          <span>{row.fundsAvailable}</span>
+          <span>{row.formattedFunds}</span>
         </Tooltip>
       </td>
       <td>{row.currency.currencyName}</td>
