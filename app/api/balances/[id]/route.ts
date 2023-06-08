@@ -1,8 +1,7 @@
-// create NextJS GET route handler that takes id and returns id
-
 import { NextRequest, NextResponse } from "next/server";
 
 import responseMock from "@/mock/mock-balances.json";
+const { collection } = responseMock.data;
 
 export async function GET(
   request: NextRequest,
@@ -12,7 +11,6 @@ export async function GET(
     params: { id: string };
   }
 ) {
-  const { id } = params;
 
   return NextResponse.json(responseMock);
 }
