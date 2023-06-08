@@ -3,8 +3,7 @@ import { Balance, Currency, User } from "@/types";
 
 import BalancesTable from "./BalanceTable";
 import TableControls from "./TableControls";
-import { BalanceTableRow } from "./types";
-import { getRoundedFunds } from "./util";
+import { formatFunds, BalanceTableRow } from "./util";
 
 type SearchParamsType = { [key: string]: string | undefined } | undefined;
 
@@ -31,7 +30,7 @@ async function getData(
 
     return {
       ...balance,
-      formattedFunds: getRoundedFunds(balance.fundsAvailable, currency),
+      formattedFunds: formatFunds(balance.fundsAvailable, currency),
       currency,
       user,
     };

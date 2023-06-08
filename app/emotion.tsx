@@ -15,7 +15,7 @@ export default function RootStyleRegistry({
 }: {
   children: React.ReactNode;
 }) {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>("dark");
+  const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
   const toggleColorScheme = (value?: ColorScheme) => 
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
 
