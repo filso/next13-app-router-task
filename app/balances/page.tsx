@@ -5,17 +5,21 @@ import BalancesTable from "./BalanceTable";
 import TableControls from "./TableControls";
 import { formatFunds, BalanceTableRow } from "./util";
 
-async function getData(
-  searchParams: { [key: string]: string }
-): Promise<BalanceTableRow[]> {
+async function getData(searchParams: {
+  [key: string]: string;
+}): Promise<BalanceTableRow[]> {
   const balancesUrl = "/balances?" + new URLSearchParams(searchParams);
-  
-  const balances = await fetchCollection<Balance>(balancesUrl, { revalidate: 1 });
-  
-  const currencies = await fetchCollection<Currency>("/currencies", {
-    revalidate: 120,
+
+  const balances = await fetchCollection<Balance>(balancesUrl, {
+    cache: "no-store",
   });
-  const users = await fetchCollection<User>("/users", { revalidate: 60 });
+
+  const currencies = await fetchCollection<Currency>("/currencies", {
+    cache: "no-store",
+  });
+  const users = await fetchCollection<User>("/users", {
+    cache: "no-store",
+  });
 
   return balances.map((balance) => {
     const currency = currencies.find(

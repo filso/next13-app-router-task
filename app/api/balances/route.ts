@@ -20,8 +20,8 @@ const getResponseWithCollectionFilteredBy = (
 };
 
 export async function GET(request: NextRequest) {
-  const id = request.nextUrl.searchParams.get("id");
   const balanceType = request.nextUrl.searchParams.get("balanceType");
+  
 
   return NextResponse.json(responseMock);
 }
