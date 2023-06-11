@@ -1,39 +1,20 @@
-import { Table, Box } from "@mantine/core";
-import { BalanceTableRow } from "../util";
-import BalanceTable from "../BalanceTable";
+import { BalanceTableRow, extendBalanceData } from "../util";
+import SingleBalancePage from "./SingleBalancePage";
 
-// async function getData(): Promise<BalanceTableRow> {
-//   const balancesUrl = "/balances?" + new URLSearchParams(searchParams);
-// }
+async function getBalanceInfo(id: string): Promise<BalanceTableRow> {
+  const res = await fetch(`${process.env.BASE_URL}/api/balances/${id}`, {
+    cache: "no-store",
+  });
 
-export default async function Balance() {
-  const data = { user: {}, currency: {} } as BalanceTableRow;
+  return extendBalanceData(await res.json());
+}
 
-  return (
-    <div>
-      <h1>Balance</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>User Name</th>
-            <th>Funds Available</th>
-            <th>Currency</th>
-            <th>Balance Type</th>
-            <th>Balance Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{data.user.userName}</td>
-            <td>
-              <span>{data.formattedFunds}</span>
-            </td>
-            <td>{data.currency.currencyName}</td>
-            <td>{data.balanceType}</td>
-            <td>{data.balanceName}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
+export default async function Balance({
+  params: { id },
+}: {
+  params: { id: string };
+}) {
+  const data = await getBalanceInfo(id);
+
+  return <SingleBalancePage data={data} />;
 }
