@@ -1,7 +1,7 @@
-import { BalanceTableRow, extendBalanceData } from "../util";
+import { BalanceExtended, extendBalanceData } from "../util";
 import SingleBalancePage from "./SingleBalancePage";
 
-async function getBalanceInfo(id: string): Promise<BalanceTableRow> {
+async function getBalanceInfo(id: string): Promise<BalanceExtended> {
   const res = await fetch(`${process.env.BASE_URL}/api/balances/${id}`, {
     cache: "no-store",
   });

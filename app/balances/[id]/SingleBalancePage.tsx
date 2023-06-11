@@ -1,9 +1,9 @@
 "use client";
 
 import { Table, Box } from "@mantine/core";
-import { BalanceTableRow } from "../util";
+import { BalanceExtended } from "../util";
 
-export default function SingleBalancePage({ data }: { data: BalanceTableRow }) {
+export default function SingleBalancePage({ data }: { data: BalanceExtended }) {
   return (
     <Box>
       <h1>Balance {data.balanceId}</h1>

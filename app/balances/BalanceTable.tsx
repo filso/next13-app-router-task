@@ -3,21 +3,21 @@
 import { usePathname, useRouter } from "next/navigation";
 import { Table, Box, Tooltip } from "@mantine/core";
 
-import { BalanceTableRow } from "./util";
+import { BalanceExtended } from "./util";
 
 interface BalanceTableProps {
-  data: BalanceTableRow[];
+  data: BalanceExtended[];
 }
 
 export default function BalanceTable({ data }: BalanceTableProps) {
   const pathname = usePathname();
   const router = useRouter();
 
-  const handleRowClick = (row: BalanceTableRow) => {
+  const handleRowClick = (row: BalanceExtended) => {
     router.push(`${pathname}/${row.balanceId}`);
   };
 
-  const rows = data.map((row: BalanceTableRow) => (
+  const rows = data.map((row: BalanceExtended) => (
     <Box component="tr" key={row.balanceId} onClick={() => handleRowClick(row)}>
       <td>{row.user.userName}</td>
       <td>

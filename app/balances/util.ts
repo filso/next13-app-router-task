@@ -3,7 +3,7 @@ import BigNumber from "bignumber.js";
 import { Balance, Currency, User } from "@/types";
 import fetchCollection from "@/lib/fetchCollection";
 
-export type BalanceTableRow = Balance & { currency: Currency; user: User } & {
+export type BalanceExtended = Balance & { currency: Currency; user: User } & {
   formattedFunds: string;
 };
 
@@ -13,7 +13,7 @@ export function formatFunds(funds: string, currency: Currency): string {
 
 export async function extendBalanceData(
   balance: Balance
-): Promise<BalanceTableRow> {
+): Promise<BalanceExtended> {
   const currencies = await fetchCollection<Currency>("/currencies", {
     cache: "no-store",
   });

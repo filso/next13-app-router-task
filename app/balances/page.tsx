@@ -3,11 +3,11 @@ import { Balance } from "@/types";
 
 import BalancesTable from "./BalanceTable";
 import TableControls from "./TableControls";
-import { BalanceTableRow, extendBalanceData } from "./util";
+import { BalanceExtended, extendBalanceData } from "./util";
 
 async function getData(searchParams: {
   [key: string]: string;
-}): Promise<BalanceTableRow[]> {
+}): Promise<BalanceExtended[]> {
   const balancesUrl = "/balances?" + new URLSearchParams(searchParams);
 
   const balances = await fetchCollection<Balance>(balancesUrl, {
