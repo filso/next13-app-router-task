@@ -11,7 +11,7 @@ async function getData(searchParams: {
   const balancesUrl = "/balances?" + new URLSearchParams(searchParams);
 
   const balances = await fetchCollection<Balance>(balancesUrl, {
-    cache: "no-store",
+    next: { revalidate: 60 },
   });
 
   return Promise.all(balances.map(extendBalanceData));

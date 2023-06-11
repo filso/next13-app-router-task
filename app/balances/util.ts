@@ -15,10 +15,10 @@ export async function extendBalanceData(
   balance: Balance
 ): Promise<BalanceExtended> {
   const currencies = await fetchCollection<Currency>("/currencies", {
-    cache: "no-store",
+    next: { revalidate: 120 },
   });
   const users = await fetchCollection<User>("/users", {
-    cache: "no-store",
+    next: { revalidate: 60 },
   });
 
   const currency = currencies.find(
