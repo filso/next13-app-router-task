@@ -1,0 +1,102 @@
+[
+  {
+    "userId": "ac1cbcd9-615c-4390-94f1-6601a107cf0e",
+    "balanceId": "7a834b8b-77d5-4a58-b815-8cd91533e221",
+    "currencyId": "728c1ea1-2d01-41b5-ade4-4b728b62faa6",
+    "balanceType": "USER",
+    "balanceName": "Testowe saldo 1",
+    "fundsAvailable": "50660",
+    "updatedAt": 1670363421944,
+    "createdAt": 1670362615433,
+    "formattedFunds": "5.1e+4",
+    "currency": {
+      "currencyId": "728c1ea1-2d01-41b5-ade4-4b728b62faa6",
+      "currencyName": "Testowa waluta 1",
+      "precision": 2
+    },
+    "user": {
+      "userId": "ac1cbcd9-615c-4390-94f1-6601a107cf0e",
+      "userName": "jan.kowalski@norion.com"
+    }
+  },
+  {
+    "userId": "dd1cbcd9-615c-4390-94f1-6601a107cf0e",
+    "balanceId": "7d834b8b-77d5-4a58-b815-8cd91533e222",
+    "currencyId": "7d8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+    "balanceType": "USER",
+    "balanceName": "Testowe saldo 2",
+    "fundsAvailable": "90071992547409912",
+    "updatedAt": 1640363421944,
+    "createdAt": 1670945403333,
+    "formattedFunds": "9.0071993e+16",
+    "currency": {
+      "currencyId": "7d8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+      "currencyName": "Testowa waluta 2",
+      "precision": 8
+    },
+    "user": {
+      "userId": "dd1cbcd9-615c-4390-94f1-6601a107cf0e",
+      "userName": "jan.kowalski1@norion.com"
+    }
+  },
+  {
+    "userId": "ad1cbcd9-615c-4390-94f1-6601a107cf0e",
+    "balanceId": "7a834b8b-77d5-4a58-b815-8cd91533e223",
+    "currencyId": "7a8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+    "balanceType": "ADMIN",
+    "balanceName": "Testowe saldo 3",
+    "fundsAvailable": "90071992547409912",
+    "updatedAt": 1650363421944,
+    "createdAt": 1665973615433,
+    "formattedFunds": "9.0071993e+16",
+    "currency": {
+      "currencyId": "7a8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+      "currencyName": "Testowa waluta 3",
+      "precision": 8
+    },
+    "user": {
+      "userId": "ad1cbcd9-615c-4390-94f1-6601a107cf0e",
+      "userName": "jan.kowalski2@norion.com"
+    }
+  },
+  {
+    "userId": "bd1cbcd9-615c-4390-94f1-6601a107cf0e",
+    "balanceId": "7b834b8b-77d5-4a58-b815-8cd91533e224",
+    "currencyId": "7b8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+    "balanceType": "SYSTEM",
+    "balanceName": "Testowe saldo 4",
+    "fundsAvailable": "8007199254740991292547409912",
+    "updatedAt": 1650863421944,
+    "createdAt": 1668973615433,
+    "formattedFunds": "8.00719925474099129e+27",
+    "currency": {
+      "currencyId": "7b8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+      "currencyName": "Testowa waluta 4",
+      "precision": 18
+    },
+    "user": {
+      "userId": "bd1cbcd9-615c-4390-94f1-6601a107cf0e",
+      "userName": "jan.kowalski3@norion.com"
+    }
+  },
+  {
+    "userId": "bd1cbcd9-615c-4390-94f1-6601a107cf0e",
+    "balanceId": "7b834b8b-77d5-4a58-b815-8cd91533e225",
+    "currencyId": "7b8c1ea1-2a01-41b5-ade4-4b728b62faa6",
+    "balanceType": "SYSTEM",
+    "balanceName": "Testowe saldo 5",
+    "fundsAvailable": "8007199254740991292547409912",
+    "updatedAt": 1650863421944,
+    "createdAt": 1650862615433,
+    "formattedFunds": "8.00719925474099129e+27",
+    "currency": {
+      "currencyId": "7b8c1ea1-2a01-41b5-ade4-4b728b62faa6",
+      "balanceName": "Testowa waluta 5",
+      "precision": 18
+    },
+    "user": {
+      "userId": "bd1cbcd9-615c-4390-94f1-6601a107cf0e",
+      "userName": "jan.kowalski3@norion.com"
+    }
+  }
+]
