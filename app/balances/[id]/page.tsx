@@ -1,13 +1,14 @@
 import { Table, Box } from "@mantine/core";
 import { BalanceTableRow } from "../util";
+import BalanceTable from "../BalanceTable";
 
-async function getData(): Promise<BalanceTableRow> {
-  const balancesUrl = "/balances?" + new URLSearchParams(searchParams);
-}
+// async function getData(): Promise<BalanceTableRow> {
+//   const balancesUrl = "/balances?" + new URLSearchParams(searchParams);
+// }
 
-export default function Balance({ data }: BalanceTableRow) {
-  
-  
+export default async function Balance() {
+  const data = { user: {}, currency: {} } as BalanceTableRow;
+
   return (
     <div>
       <h1>Balance</h1>

@@ -11,6 +11,10 @@ export async function GET(
     params: { id: string };
   }
 ) {
+  const found = collection.find((item) => item.balanceId === id);
+  if (!found) {
+    throw new Error("return 404");
+  }
 
   return NextResponse.json(responseMock);
 }
